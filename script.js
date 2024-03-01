@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     var form = document.getElementById("weather-form");
-    const img = document.querySelector("img");
+    const img = document.querySelector(".weatherImg");
     const cityOutput = document.querySelector(".city");
     const degree = document.querySelector("#degree");
     const content = document.querySelector(".content");
+    const btnTheme = document.querySelector("#changeTheme");
     
 
 
@@ -46,4 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
         img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         content.style.display = "flex";
     }
+
+    btnTheme.addEventListener('click', function(){
+        document.body.classList.toggle('dark-mode');
+    });
 });

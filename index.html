@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,25 @@
 </head>
 <body>
     <div class="container">
+        <div class="navbarDiv">
+        <button id="changeTheme">
+            <img id="darkModeImg" src="imgs/dark_mode_icon.png" alt="Dark Mode Image">
+        </button>
+        </div>
+        <div class="formDiv">
         <h1>Previsão do Tempo</h1>
         <form id="weather-form">
             <input type="text" id="city" placeholder="Digite o nome da cidade">
             <button type="submit">Consultar</button>
         </form>
+        </div>
         <div id="weather-info">
             <div class="content" style="display: none;">
                 <section>
                     <h2 class="city"></h2>
                     <span id="degree"></span>
                 </section>
-                <img src="" alt="clima">
+                <img class="weatherImg" src="" alt="clima">
             </div>
         </div>
     </div>
