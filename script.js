@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     async function consultaPrevisao(cityName) {
-        let apiKey = `3dd55eaeca7040eaaddb1d3aba1b97de`; //Insert here your OpenWeatherMap API Key
+        let apiKey = ``; //Insert here your OpenWeatherMap API Key
         let urlApi = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}`+`&appid=${apiKey}&units=metric`;
 
         try {
