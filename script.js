@@ -13,17 +13,21 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         
         const cityName = document.getElementById("city").value.trim();
+        const apiKey = document.getElementById("api-key").value.trim();
 
         if (cityName === "") {
             alert("Insira um nome de uma cidade! ");
             return;
         }
+        if (apiKey === "") {
+            alert("Insira uma API Key válida para prosseguir! ");
+            return;
+        }
 
-        consultaPrevisao(cityName);
+        consultaPrevisao(cityName,apiKey);
     })
 
-    async function consultaPrevisao(cityName) {
-        let apiKey = ``; //Insert here your OpenWeatherMap API Key
+    async function consultaPrevisao(cityName,apiKey) {
         let urlApi = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}`+`&appid=${apiKey}&units=metric`;
 
         try {
